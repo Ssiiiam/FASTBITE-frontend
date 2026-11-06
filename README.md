@@ -7,11 +7,10 @@ Features
 Customer
 
 - Browse the restaurant menu and products.
-- View product details.
+- View menu of products.
 - Add products to the shopping cart.
 - Proceed to checkout.
 - View orders and order details.
-- Access a customer profile.
 
 Restaurant Staff
 
