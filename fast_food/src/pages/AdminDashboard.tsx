@@ -11,6 +11,13 @@ export default function AdminDashboard() {
       </div>
 
       <section className="admin-dashboard-links">
+        <Link to="/admin/products" className="admin-dashboard-card">
+          <div className="admin-card-icon">🍔</div>
+          <h2>Product Management</h2>
+          <p>Add, edit, and manage restaurant products.</p>
+          <span className="admin-card-action">Manage products →</span>
+        </Link>
+
         <Link to="/admin/orders" className="admin-dashboard-card">
           <div className="admin-card-icon">📦</div>
           <h2>Orders</h2>

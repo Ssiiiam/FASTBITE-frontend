@@ -61,7 +61,6 @@ function App() {
               }
             >
               <Route path="/staff" element={<StaffDashboard />} />
-              <Route path="/admin" element={<AdminDashboard />} />
             </Route>
 
             {/* Staff Profile */}
