@@ -1,0 +1,249 @@
+.admin-order-details-page {
+  min-height: 100vh;
+  padding: 50px 7%;
+  background: var(--fb-bg);
+  color: var(--fb-text);
+}
+
+.admin-order-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.admin-details-header {
+  margin-bottom: 35px;
+}
+
+.admin-details-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--fb-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-details-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+}
+
+.admin-details-header p {
+  margin: 0;
+  color: var(--fb-muted);
+  line-height: 1.6;
+}
+
+.admin-details-card {
+  margin-bottom: 28px;
+  padding: 28px;
+  background: linear-gradient(
+    145deg,
+    var(--fb-card),
+    var(--fb-surface)
+  );
+  border: 1px solid var(--fb-border);
+  border-radius: 16px;
+}
+
+.admin-details-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--fb-border);
+}
+
+.admin-details-card-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.admin-details-status {
+  padding: 7px 13px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--fb-gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.admin-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  padding-top: 25px;
+}
+
+.admin-details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.admin-details-item span {
+  color: var(--fb-muted);
+  font-size: 0.85rem;
+}
+
+.admin-details-item strong {
+  color: var(--fb-text);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.admin-details-item .admin-details-total {
+  color: var(--fb-gold);
+  font-size: 1.1rem;
+}
+
+.admin-details-full {
+  grid-column: 1 / -1;
+}
+
+.admin-history-card {
+  margin-bottom: 0;
+}
+
+.admin-history-count {
+  color: var(--fb-muted);
+  font-size: 0.85rem;
+}
+
+.admin-history-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.admin-history-item {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding-bottom: 30px;
+}
+
+.admin-history-item:not(:last-child)::before {
+  position: absolute;
+  top: 14px;
+  bottom: 0;
+  left: 6px;
+  width: 2px;
+  background: var(--fb-border);
+  content: "";
+}
+
+.admin-history-marker {
+  z-index: 1;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  border: 3px solid var(--fb-gold);
+  border-radius: 50%;
+  background: var(--fb-card);
+}
+
+.admin-history-content {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--fb-border);
+  border-radius: 10px;
+  background: var(--fb-surface);
+}
+
+.admin-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.admin-history-top strong {
+  color: var(--fb-gold);
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.admin-history-top time {
+  color: var(--fb-muted);
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.admin-history-content p {
+  margin: 12px 0 0;
+  color: var(--fb-muted);
+  font-size: 0.85rem;
+}
+
+.admin-history-empty {
+  padding: 35px 15px;
+  color: var(--fb-muted);
+  text-align: center;
+}
+
+.admin-history-empty span {
+  font-size: 2rem;
+}
+
+.admin-history-empty p {
+  margin-bottom: 0;
+}
+
+.admin-details-message {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 1px solid var(--fb-border);
+  border-radius: 12px;
+  background: var(--fb-surface);
+  color: var(--fb-muted);
+  text-align: center;
+}
+
+.admin-details-error {
+  border-color: var(--fb-danger);
+  color: var(--fb-danger);
+}
+
+@media (max-width: 650px) {
+  .admin-order-details-page {
+    padding: 35px 5%;
+  }
+
+  .admin-details-card {
+    padding: 22px 17px;
+  }
+
+  .admin-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .admin-details-full {
+    grid-column: auto;
+  }
+
+  .admin-details-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .admin-history-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-history-top time {
+    text-align: left;
+  }
+}

@@ -1,0 +1,409 @@
+.home {
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 1200px;
+  min-height: 620px;
+  margin: 0 auto;
+  padding: 70px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-subtitle {
+  margin: 0 0 18px;
+
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  color: #f5f1e8;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero-description {
+  max-width: 500px;
+  margin: 28px 0;
+
+  color: #aaa69d;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 24px;
+
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.primary-button {
+  color: #11100e;
+  background-color: #d4af37;
+}
+
+.primary-button:hover {
+  background-color: #e6c45a;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.secondary-button:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Hero image */
+
+.hero-image {
+  position: relative;
+
+  width: 420px;
+  height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-circle {
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.2),
+    rgba(212, 175, 55, 0.02)
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.hero-food {
+  position: relative;
+  z-index: 1;
+
+  font-size: 12rem;
+
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.5));
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.categories-section,
+.popular-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-heading {
+  margin-bottom: 40px;
+}
+
+.section-heading p {
+  margin: 0 0 8px;
+
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #f5f1e8;
+  font-size: 2.4rem;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.category-card {
+  padding: 30px 20px;
+
+  color: #f5f1e8;
+  background-color: #151412;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(212, 175, 55, 0.5);
+  background-color: #191713;
+}
+
+.category-icon {
+  display: block;
+  margin-bottom: 15px;
+
+  font-size: 3rem;
+}
+
+.category-card h3 {
+  margin: 0 0 7px;
+}
+
+.category-card p {
+  margin: 0;
+
+  color: #858078;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   POPULAR PRODUCTS
+========================= */
+
+.popular-section {
+  padding-top: 40px;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.food-card {
+  overflow: hidden;
+
+  background-color: #151412;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.food-image {
+  height: 240px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(212, 175, 55, 0.15),
+      transparent 65%
+    );
+
+  font-size: 7rem;
+}
+
+.food-info {
+  padding: 22px;
+}
+.food-category {
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.food-info h3 {
+  min-height: 50px;
+  margin: 10px 0 18px;
+
+  color: #f5f1e8;
+  font-size: 1.15rem;
+}
+
+.food-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-price {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.add-button {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #11100e;
+  background-color: #d4af37;
+
+  border-radius: 8px;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.add-button:hover {
+  background-color: #e6c45a;
+  transform: scale(1.05);
+}
+
+.view-all {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding-top: 60px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-food {
+    font-size: 8rem;
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .popular-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+}

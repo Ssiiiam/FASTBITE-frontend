@@ -1,0 +1,115 @@
+.order-details-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: var(--fb-bg);
+  color: var(--fb-text);
+}
+
+.order-details-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.order-details-container > h1 {
+  margin-bottom: 30px;
+  color: var(--fb-gold);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.order-details-section {
+  margin-bottom: 22px;
+  padding: 24px;
+  border: 1px solid var(--fb-border);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #252c30, #191e21);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.order-details-section h2 {
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--fb-border);
+  color: var(--fb-gold);
+  font-size: 1.25rem;
+}
+
+.order-details-section p {
+  margin: 11px 0;
+  color: var(--fb-muted);
+  line-height: 1.7;
+}
+
+.order-item {
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--fb-border);
+  border-radius: 10px;
+  background: rgba(16, 18, 20, 0.55);
+}
+
+.order-item p:first-child {
+  color: var(--fb-text);
+  font-weight: 700;
+}
+
+.order-payment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.order-details-container button {
+  padding: 12px 20px;
+  border: 1px solid var(--fb-gold);
+  border-radius: 9px;
+  background: var(--fb-gold);
+  color: #171717;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.order-details-container button:hover {
+  background: var(--fb-gold-hover);
+  transform: translateY(-2px);
+}
+
+.order-total-section strong {
+  display: block;
+  padding-top: 15px;
+  border-top: 1px solid var(--fb-border);
+  color: var(--fb-gold);
+  font-size: 1.3rem;
+}
+
+.order-details-message {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  background: var(--fb-bg);
+  color: var(--fb-gold);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .order-details-page {
+    padding: 22px 12px;
+  }
+
+  .order-details-section {
+    padding: 17px;
+  }
+
+  .order-details-container > h1 {
+    font-size: 1.6rem;
+  }
+
+  .order-payment-actions {
+    flex-direction: column;
+  }
+
+  .order-payment-actions button {
+    width: 100%;
+  }
+}

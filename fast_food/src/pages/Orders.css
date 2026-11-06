@@ -1,0 +1,92 @@
+.orders-page {
+  min-height: 100vh;
+  padding: 36px;
+  background: var(--fb-bg);
+  color: var(--fb-text);
+}
+
+.orders-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.orders-container h1 {
+  margin-bottom: 30px;
+  color: var(--fb-gold);
+  font-size: 2rem;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.order-card {
+  padding: 24px;
+  border: 1px solid var(--fb-border);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #252c30, #191e21);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+.order-card h2 {
+  margin: 0 0 18px;
+  color: var(--fb-gold);
+  font-size: 1.2rem;
+}
+
+.order-card p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  margin: 12px 0;
+  border-bottom: 1px solid var(--fb-border);
+  color: var(--fb-muted);
+  font-size: 0.95rem;
+}
+
+.order-card p strong {
+  color: var(--fb-text);
+  text-align: right;
+}
+
+.order-card .order-total {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--fb-gold);
+  border-bottom: none;
+  color: var(--fb-gold);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.orders-message {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+  background: var(--fb-bg);
+  color: var(--fb-muted);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .orders-page {
+    padding: 24px 14px;
+  }
+
+  .orders-container h1 {
+    font-size: 1.65rem;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+}

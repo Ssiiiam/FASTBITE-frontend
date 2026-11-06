@@ -1,0 +1,226 @@
+.admin-orders-page {
+  min-height: 100vh;
+  padding: 50px 7%;
+  background: var(--fb-bg);
+  color: var(--fb-text);
+}
+
+.admin-orders-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.admin-orders-header {
+  margin-bottom: 35px;
+}
+
+.admin-orders-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--fb-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-orders-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+}
+
+.admin-orders-header p {
+  margin: 0;
+  color: var(--fb-muted);
+}
+
+.admin-orders-summary {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.admin-orders-summary > div {
+  min-width: 190px;
+  padding: 20px 24px;
+  background: var(--fb-surface);
+  border: 1px solid var(--fb-border);
+  border-radius: 12px;
+}
+
+.admin-orders-summary span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--fb-muted);
+  font-size: 0.85rem;
+}
+
+.admin-orders-summary strong {
+  color: var(--fb-gold);
+  font-size: 1.8rem;
+}
+
+.admin-orders-list {
+  display: grid;
+  gap: 22px;
+}
+
+.admin-order-card {
+  padding: 25px;
+  background: linear-gradient(
+    145deg,
+    var(--fb-card),
+    var(--fb-surface)
+  );
+  border: 1px solid var(--fb-border);
+  border-radius: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.admin-order-card:hover {
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+.admin-order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--fb-border);
+}
+
+.admin-order-number {
+  color: var(--fb-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.admin-order-top h2 {
+  margin: 5px 0 0;
+  font-size: 1.4rem;
+}
+
+.admin-order-status {
+  padding: 7px 13px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--fb-gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.admin-order-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding: 24px 0;
+}
+
+.admin-order-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.admin-order-detail span {
+  color: var(--fb-muted);
+  font-size: 0.82rem;
+}
+
+.admin-order-detail strong {
+  color: var(--fb-text);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.admin-order-detail .admin-order-total {
+  color: var(--fb-gold);
+  font-size: 1.05rem;
+}
+
+.admin-order-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 18px;
+  border-top: 1px solid var(--fb-border);
+}
+
+.admin-order-footer button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 18px;
+  border: 1px solid var(--fb-gold);
+  border-radius: 8px;
+  background: var(--fb-gold);
+  color: #101214;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-order-footer button:hover {
+  background: var(--fb-gold-hover);
+  transform: translateY(-2px);
+}
+
+.admin-order-footer button span {
+  font-size: 1.1rem;
+}
+
+.admin-orders-empty,
+.admin-orders-message {
+  padding: 45px 20px;
+  background: var(--fb-surface);
+  border: 1px solid var(--fb-border);
+  border-radius: 14px;
+  color: var(--fb-muted);
+  text-align: center;
+}
+
+.admin-orders-empty-icon {
+  font-size: 2.5rem;
+}
+
+.admin-orders-empty h2 {
+  margin: 15px 0 8px;
+  color: var(--fb-text);
+}
+
+.admin-orders-empty p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.admin-orders-error {
+  border-color: var(--fb-danger);
+  color: var(--fb-danger);
+}
+
+@media (max-width: 650px) {
+  .admin-orders-page {
+    padding: 35px 5%;
+  }
+
+  .admin-order-card {
+    padding: 20px 16px;
+  }
+
+  .admin-order-details {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .admin-order-top {
+    align-items: flex-start;
+  }
+
+  .admin-order-footer button {
+    width: 100%;
+    justify-content: center;
+  }
+}

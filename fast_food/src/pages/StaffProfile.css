@@ -1,0 +1,140 @@
+.staff-profile-page {
+  min-height: 75vh;
+  padding: 48px 20px;
+  background: #11100e;
+  color: #f5f1e8;
+}
+
+.staff-profile-card {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  background: #1a1915;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #11100e;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.profile-heading {
+  min-width: 0;
+}
+
+.profile-eyebrow {
+  margin: 0 0 8px;
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.profile-heading h1 {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+  font-size: clamp(24px, 4vw, 32px);
+}
+
+.profile-role {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  color: #e6c45a;
+  font-size: 13px;
+}
+
+.profile-divider {
+  height: 1px;
+  margin: 30px 0;
+  background: rgba(212, 175, 55, 0.2);
+}
+
+.staff-profile-card h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-field {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  background: #211f1a;
+}
+
+.profile-field span {
+  display: block;
+  margin-bottom: 9px;
+  color: #aaa69a;
+  font-size: 13px;
+}
+
+.profile-field strong {
+  overflow-wrap: anywhere;
+  color: #f5f1e8;
+  font-size: 15px;
+}
+
+.profile-message {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #1a1915;
+  color: #e6c45a;
+}
+
+.profile-error {
+  border: 1px solid #a94442;
+  color: #ffb4ad;
+}
+
+@media (max-width: 560px) {
+  .staff-profile-page {
+    padding: 28px 14px;
+  }
+
+  .staff-profile-card {
+    padding: 22px 18px;
+  }
+
+  .profile-header {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .profile-avatar {
+    width: 58px;
+    height: 58px;
+    font-size: 25px;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+}

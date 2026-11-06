@@ -1,0 +1,119 @@
+.register-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #11100e;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background: #181715;
+  border: 1px solid #2b2924;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.register-container h1 {
+  margin-bottom: 10px;
+  color: #f5f1e8;
+  font-size: 32px;
+  text-align: center;
+}
+
+.register-container > p {
+  margin-bottom: 30px;
+  color: #a8a39a;
+  text-align: center;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #f5f1e8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #3a3731;
+  border-radius: 8px;
+  background: #11100e;
+  color: #f5f1e8;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: #6f6b63;
+}
+
+.form-group input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.register-error {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #7a3030;
+  border-radius: 8px;
+  background: #321818;
+  color: #ff8f8f;
+  font-size: 14px;
+}
+
+.register-container button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: #11100e;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.register-container button:hover {
+  background: #e5c04a;
+  transform: translateY(-1px);
+}
+
+.register-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 500px) {
+  .register-page {
+    padding: 40px 16px;
+  }
+
+  .register-container {
+    padding: 30px 22px;
+  }
+
+  .register-container h1 {
+    font-size: 27px;
+  }
+}
