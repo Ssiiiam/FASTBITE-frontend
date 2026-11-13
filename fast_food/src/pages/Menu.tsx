@@ -46,6 +46,7 @@ export default function Menu() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(() => Boolean(tableToken));
   const [error, setError] = useState("");
+  const [showLoginMessage, setShowLoginMessage] = useState(false);
 
   useEffect(() => {
     const loadMenu = async () => {
@@ -82,7 +83,8 @@ export default function Menu() {
     const success = await addToCart(product);
 
     if (!success) {
-      console.error("Failed to add product to cart.");
+      setShowLoginMessage(true);
+      return;
     }
   };
 
@@ -130,10 +132,6 @@ export default function Menu() {
                   <p className="menu-product-price">
                     {product.price.toLocaleString()} Toman
                   </p>
-
-                   is(isRestaurantMode) {
-                      <p>please login to make your order!</p>
-                    }
                   <button
                     type="button"
                     onClick={() => void handleAddToCart(product) }
