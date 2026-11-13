@@ -52,7 +52,6 @@ function App() {
               <Route path="/orders" element={<Orders />} />
               <Route path="/orders/:id" element={<OrderDetails />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/cart" element={<Cart />} />
             </Route>
 
             {/* Staff and admin pages */}
