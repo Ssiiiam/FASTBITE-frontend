@@ -109,3 +109,25 @@
     padding: 13px;
   }
 }
+.login-message {
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 450px;
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-message p {
+  margin-bottom: 12px;
+  color: #664d03;
+}
+
+.login-message button {
+  margin: 5px;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
