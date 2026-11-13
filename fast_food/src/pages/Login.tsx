@@ -1,3 +1,4 @@
+import {Eye, EyeOff} from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -16,6 +17,7 @@ function Login() {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -89,12 +91,18 @@ function Login() {
 
             <input
               id="password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               placeholder="Enter your password"
               required
             />
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={()=> setShowPassword((prev)=> !prev)} >
+              {showPassword ? <EyeOff /> : <Eye />}
+            </button>
           </div>
 
           {error && <p className="login-error">{error}</p>}
