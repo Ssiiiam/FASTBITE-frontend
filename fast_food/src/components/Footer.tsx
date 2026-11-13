@@ -36,7 +36,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact</h3>
 
-          <p>📍 Qom, Iran</p>
+          <p>📍 Iran</p>
           <p>📞 +98 000 000 0000</p>
           <p>✉️ hello@fastbite.com</p>
         </div>
