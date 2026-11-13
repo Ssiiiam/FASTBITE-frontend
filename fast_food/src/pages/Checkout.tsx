@@ -139,7 +139,6 @@ function Checkout() {
       // 3. Handle online payment.
       if (paymentMethod === "online") {
         const isTestMode =
-          import.meta.env.DEV &&
           import.meta.env.VITE_PAYMENT_TEST_MODE === "true";
 
         if (isTestMode) {
