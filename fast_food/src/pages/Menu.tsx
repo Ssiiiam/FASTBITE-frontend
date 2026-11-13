@@ -131,14 +131,14 @@ export default function Menu() {
                     {product.price.toLocaleString()} Toman
                   </p>
 
-                  <button
-                    type="button"
-                    onClick={() => void handleAddToCart(product)}
-                  >
-                    Add to Cart
-                    is(isRestaurantMode) {
+                   is(isRestaurantMode) {
                       <p>please login to make your order!</p>
                     }
+                  <button
+                    type="button"
+                    onClick={() => void handleAddToCart(product) }
+                  >
+                    Add to Cart
                   </button>
                 </div>
               </article>
