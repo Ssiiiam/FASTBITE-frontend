@@ -38,6 +38,7 @@ export default function Menu() {
   const baseURL = api.defaults.baseURL ?? "";
 
   const imageBaseURL = baseURL.endsWith("/api")
+
     ? baseURL.slice(0, -4)
     : baseURL;
 
@@ -135,6 +136,9 @@ export default function Menu() {
                     onClick={() => void handleAddToCart(product)}
                   >
                     Add to Cart
+                    is(isRestaurantMode) {
+                      <p>please login to make your order!</p>
+                    }
                   </button>
                 </div>
               </article>
