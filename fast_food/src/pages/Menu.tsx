@@ -1,5 +1,5 @@
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import api from "../api/axios";
 import { useCart } from "../context/CartContext";
 import "./menu.css";
@@ -31,6 +31,7 @@ export default function Menu() {
   console.log("SEARCH:", window.location.search);
   console.log("PARAM TABLE:", searchParams.get("table"));
 
+  const navigate = useNavigate();
   const tableToken = searchParams.get("table");
 
   const { addToCart } = useCart();
@@ -38,7 +39,6 @@ export default function Menu() {
   const baseURL = api.defaults.baseURL ?? "";
 
   const imageBaseURL = baseURL.endsWith("/api")
-
     ? baseURL.slice(0, -4)
     : baseURL;
 
@@ -113,6 +113,22 @@ export default function Menu() {
         )}
       </header>
 
+      {showLoginMessage && (
+        <div className="login-message">
+          <p>
+            Welcome! To add products to your cart and place an order, please log
+            in first.
+          </p>
+
+          <button type="button" onClick={() => navigate("/login")}>
+            Log In
+          </button>
+
+          <button type="button" onClick={() => setShowLoginMessage(false)}>
+            Close
+          </button>
+        </div>
+      )}
       <main className="menu-main">
         <h2>Our Menu</h2>
 
@@ -134,7 +150,7 @@ export default function Menu() {
                   </p>
                   <button
                     type="button"
-                    onClick={() => void handleAddToCart(product) }
+                    onClick={() => void handleAddToCart(product)}
                   >
                     Add to Cart
                   </button>
